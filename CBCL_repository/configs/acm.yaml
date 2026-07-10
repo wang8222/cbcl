@@ -1,0 +1,37 @@
+dataset: acm
+data_dir: data/ACM
+output_dir: runs/acm
+seed: 0
+device: auto
+cpu_threads: 4
+
+model:
+  hidden_dim: 64
+  projection_dim: 64
+  structural_layers: 2
+  gat_heads: 4
+  transformer_heads: 4
+  dropout: 0.2
+  semantic_beta: 0.5
+
+preprocess:
+  metapaths: [PAP, PSP]
+  topk: [110, 700]
+  positive_threshold: 0
+  symmetrize_topk: true
+
+train:
+  epochs: 300
+  patience: 40
+  learning_rate: 0.0007
+  weight_decay: 0.0
+  temperature: 0.4
+  direction_weight: 0.5
+  contrastive_chunk_size: 512
+  grad_clip: 5.0
+  log_every: 10
+
+evaluation:
+  enabled: true
+  split_ratios: [20, 40, 60]
+  clustering_repeats: 10
