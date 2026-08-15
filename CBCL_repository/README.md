@@ -7,7 +7,7 @@ utilities, and evaluation scripts for the paper:
 
 ## Paper Information
 
-**Manuscript ID:** [10895]
+**Manuscript ID:** 10895
 
 ## Authors and Affiliations
 
@@ -95,7 +95,7 @@ CBCL_repository/
 └── tests/
     ├── conftest.py
     └── test_smoke.py
-
+```
 ## File Description
 
 * `main.py`: Main program for CBCL training and evaluation.
